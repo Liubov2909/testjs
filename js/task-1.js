@@ -1,8 +1,11 @@
-function add(a, b, c) {
-  
-  console.log(`Addition result equals ${a + b + c}`);
-}
+const calculateTotalPrice = (orderedItems) => {
+  let totalPrice = 0;
 
-add(15, 27, 10);
-add(10, 20, 30);
-add(5, 10, 15);
+  orderedItems.forEach((item) => {
+    totalPrice += item;
+  });
+
+  return totalPrice;
+};
+
+console.log(calculateTotalPrice([12, 85, 37, 4]));
