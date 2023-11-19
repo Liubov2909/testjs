@@ -1,11 +1,32 @@
-const calculateTotalPrice = (orderedItems) => {
-  let totalPrice = 0;
+class User {
+  email;
 
-  orderedItems.forEach((item) => {
-    totalPrice += item;
-  });
+  constructor(email) {
+    this.email = email;
+  }
 
-  return totalPrice;
-};
+  get email() {
+    return this.email;
+  }
 
-console.log(calculateTotalPrice([12, 85, 37, 4]));
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+
+class Admin extends User {
+  static role = {
+    BASIC: "basic",
+    SUPERUSER: "superuser",
+  };
+	constructor() { email, access };
+
+}
+
+const mango = new Admin({
+  email: "mango@mail.com",
+  access: Admin.role.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.access); // "superuser"
