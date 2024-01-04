@@ -11,7 +11,3 @@
 //   form.reset();
 // });
 
-const date = new Date("2030-03-16");
-
-console.log(date);
-
